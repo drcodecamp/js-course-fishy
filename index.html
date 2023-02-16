@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>דוקטור קוד - פרוייקט גמר א' משחק יריות קורס ג'אווה סקריפט מבוא</title>
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body oncontextmenu="return false">
+        <header>
+            <div class="magazine-container"></div>
+            <div class="power-container">
+                <img src="assets/super_power.webp" alt="super powers" />
+                <p class="super-power">Super Power Ready!</p>
+            </div>
+        </header>
+        <h2>Super Powers Activated!</h2>
+        <div class="game-titles">
+            <h1>Fishy Game</h1>
+            <div class="enemies-count">Enemies Left:</div>
+            <button class="game-button" onclick="startGame()">
+                Bring them on!
+            </button>
+        </div>
+        <div class="game-container">
+            <div id="particles-js"></div>
+            <div class="hero-container">
+                <div class="hero">
+                    <div class="gun position-a"></div>
+                    <div class="gun position-b"></div>
+                    <div class="effect"></div>
+                    <div class="effect second-effect"></div>
+                </div>
+            </div>
+            <div id="enemies" class="enemies-container"></div>
+            <div id="bullets"></div>
+        </div>
+        <div class="instructions">
+            <h3>Left Mouse: Fire</h3>
+            <h3>Space Key: Super power</h3>
+        </div>
+        <script src="index.js"></script>
+        <script src="src/particles.min.js"></script>
+        <script src="src/app.js"></script>
+    </body>
+</html>

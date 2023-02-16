@@ -1,0 +1,309 @@
+* {
+    user-select: none;
+    font-family: Saira SemiCondensed, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(assets/background.webp);
+    background-size: cover;
+    cursor: crosshair;
+}
+
+h1 {
+    text-align: center;
+    font-size: 65px;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    width: 100vw;
+    position: absolute;
+    display: none;
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    color: #ffb621;
+    animation: scale-up 3s linear;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    padding: 5px;
+    color: #00ff38;
+    animation: scale-up 1s linear;
+}
+
+header {
+    position: fixed;
+    height: 70px;
+    background: rgba(33, 7, 7, 0.71);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.magazine-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 45%;
+}
+
+.instructions {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+}
+
+.ammo {
+    position: relative;
+    height: 35px;
+    background: gray;
+    width: 10px;
+    margin-left: 10px;
+}
+
+.ammo span {
+    position: absolute;
+    height: 100%;
+    background: #ffce63;
+    width: 10px;
+}
+
+@keyframes scale-up {
+    0% {
+        top: 0;
+        opacity: 0.3;
+        color: white;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        font-size: 50px;
+        top: 200px;
+        opacity: 1;
+    }
+    100% {
+        color: red;
+        top: 400px;
+        opacity: 0;
+    }
+}
+
+.enemies-count {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    color: #ffb621;
+}
+
+button {
+    text-align: center;
+    border: none;
+    padding: 30px;
+    background: #4444dd;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000e96;
+}
+
+.game-titles {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.power-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.super-power {
+    color: #0bc36b;
+    font-size: 2em;
+    margin-inline: 25px;
+    transition: background-image 0.25s ease-in-out;
+}
+
+.power-container img {
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.hero {
+    left: 333px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url('assets/hero_idle.webp');
+    background-size: contain;
+}
+
+.effect {
+    opacity: 0;
+    z-index: 10;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    transform: scale(1.5);
+    left: 198px;
+    top: 126px;
+    background-image: url('assets/effect.webp');
+    background-size: contain;
+}
+
+.second-effect {
+    left: 261px;
+    transform: scale(1.5);
+    top: 122px;
+}
+
+.gun {
+    position: absolute;
+    width: 195px;
+    transform: rotate(37deg) scale(0.7);
+    height: 155px;
+    background-image: url('assets/mini_gun.webp');
+    background-size: cover;
+    transition: all 0.1s ease-in-out;
+}
+
+.position-a {
+    z-index: 5;
+    left: 22px;
+    top: 70px;
+}
+
+.position-b {
+    z-index: -1;
+    left: 82px;
+    top: 70px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.balloons-container {
+    flex: 3;
+}
+
+.hit {
+    filter: drop-shadow(10px -1px 0px #be1818);
+}
+
+.enemy-a {
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    display: inline-block;
+    width: 210px;
+    height: 273px;
+    bottom: 0;
+    background-image: url('assets/enemy_a.webp');
+    background-size: auto;
+}
+
+.enemy-a::after {
+    content: '';
+    position: absolute;
+    top: 95%;
+    height: 25px;
+    width: 100px;
+    background: #000000;
+    right: 50px;
+    transform-origin: top center;
+    filter: blur(15px);
+}
+
+.enemy-b {
+    position: absolute;
+    margin: 0 auto;
+    display: inline-block;
+    width: 317px;
+    height: 224px;
+    bottom: 0;
+    z-index: 2;
+    background-image: url('assets/enemy_b.webp');
+    background-size: auto;
+}
+
+.enemy-b::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 10px;
+    width: 100px;
+    right: 50px;
+    z-index: 10;
+    transform-origin: top center;
+}
+
+.enemy-c {
+    position: absolute;
+    margin: 0 auto;
+    display: inline-block;
+    width: 275px;
+    height: 217px;
+    bottom: 0;
+    z-index: 3;
+    background-image: url('assets/enemy_c.webp');
+    background-size: auto;
+}
+
+.enemy-c::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    height: 10px;
+    width: 100px;
+    right: 50px;
+    z-index: 10;
+    transform-origin: top center;
+}
+
+.bullet {
+    position: absolute;
+    background-image: url('assets/bullet.webp');
+    background-size: contain;
+    width: 81px;
+    height: 7px;
+}
+
+.super-bullet {
+    position: absolute;
+    background-image: url('assets/super_bullet.webp');
+    background-size: cover;
+    width: 140px;
+    height: 20px;
+}

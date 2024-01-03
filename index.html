@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            דוקטור קוד - פרוייקט גמר א' משחק יריות קורס ג'אווה סקריפט מבוא
+        </title>
+        <link href="index.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="bush"></div>
+        <header>
+            <p class="enemies-count">Enemies Left: 0</p>
+        </header>
+        <div class="game-titles">
+            <h1>Fishy Game</h1>
+            <button class="game-button">Bring them on!</button>
+        </div>
+        <div class="game-container">
+            <div id="particles-js"></div>
+            <div class="hero-container">
+                <div class="hero">
+                    <div class="gun position-a"></div>
+                    <img src="assets/hero_idle.webp" alt="hero" />
+                    <div class="gun position-b"></div>
+                    <div class="effect"></div>
+                    <div class="effect second-effect"></div>
+                    <div class="hp-bar">
+                        <div class="bar player"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="enemies" class="enemies-container"></div>
+            <div id="bullets"></div>
+        </div>
+        <div class="instructions">
+            <h3>Move : Up & Down</h3>
+            <h3>Fire: Space</h3>
+        </div>
+        <script src="src/app.js"></script>
+        <script src="src/particles.min.js"></script>
+        <script src="src/bubble-particles.js"></script>
+    </body>
+</html>
